@@ -1,0 +1,16 @@
+{
+	"Database": {
+		"Table_Name":"DERIVATIVES_DATA",
+		"Attributes": {
+			"1":  { "SYMBOL": "VARCHAR(10)" },
+			"2":  { "UNDERLYING": "VARCHAR(20)" },
+			"3":  { "LOT_SIZE": "INT(5)" }
+		},
+		"Index": [
+			"SYMBOL"
+		],
+		"Primary_key": [
+			"SYMBOL"
+		]        
+	}
+}

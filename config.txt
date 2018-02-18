@@ -1,0 +1,23 @@
+#
+# Configuration that can change
+#
+DOWNLOADED_FOLDER = ./downloads/stocks
+DOWNLOADED_METADATA = ./downloads/metadata
+EQUITIES_URL      = http://www.nseindia.com/content/equities/
+DERIVATIVES_URL   = https://www.nseindia.com/content/fo/
+BHAVCOPY_BASE_URL = https://www.nseindia.com/content/historical/EQUITIES/
+EQUITIES_FILE     = EQUITY_L.csv
+DERIVATIVES_FILE  = fo_mktlots.csv
+
+SCRIPTSDIR = ./scripts
+MODELDIR   = ../models
+WORKDIR = ./tmp/
+START_YEAR = 2000
+MYSQL_EXE  = "C:\Program Files\MySQL\MySQL Server 5.7\bin\mysql.exe"
+MYSQL_IMPORT  = "C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqlimport.exe"
+MYSQL_USERNAME = root
+MYSQL_PASSWORD = kudremukh
+MYSQL_DATABASE = NSE
+MYSQL_EQUITIES_METADATA_MODEL    = EQUITIES_NAME.json
+MYSQL_DERIVATIVES_METADATA_MODEL = DERIVATIVES_DATA.json
+MYSQL_EQUITIES_EOD_MODEL         = EQUITIES_EOD_DATA.json

@@ -1,0 +1,28 @@
+{
+	"Database": {
+		"Table_Name":"EQUITIES_NAME",
+		"Attributes": {
+			"1":  { "SYMBOL": "VARCHAR(10)" },
+			"2":  { "NAME_OF_COMPANY": "VARCHAR(100)" },
+			"3":  { "SERIES": "VARCHAR(4)" },
+			"4":  { "DATE_OF_LISTING": "DATE" },
+            "5":  { "PAID_UP_VALUE": "INT(5)" },
+            "6":  { "MARKET_LOT": "INT(5)" },
+			"7":  { "ISIN_NUMBER": "VARCHAR(20)" },
+			"8":  { "FACE_VALUE": "INT(5)" }
+		},
+		"Index": [
+			"SYMBOL"
+		],
+		"Primary_key": [
+			"SYMBOL"
+        ],
+        "Alter_Table": [
+            {   "Attribute_position" : "4",
+                "DB_column" : "DATE_OF_LISTING",
+                "Function": "STR_TO_DATE",
+                "Format": "%d-%M-%Y"
+            }
+        ]
+	}
+}

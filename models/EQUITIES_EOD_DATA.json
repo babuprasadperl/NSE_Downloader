@@ -1,0 +1,33 @@
+{
+	"Database": {
+		"Table_Name":"EQUITIES_EOD_DATA",
+		"Attributes": {
+			"1":  { "SYMBOL": "VARCHAR(10)" },
+			"2":  { "SERIES": "VARCHAR(4)" },
+			"3":  { "OPEN": "FLOAT(10,2)" },
+			"4":  { "HIGH": "FLOAT(10,2)" },
+			"5":  { "LOW": "FLOAT(10,2)" },
+			"6":  { "CLOSE": "FLOAT(10,2)" },
+			"7":  { "LAST": "FLOAT(10,2)" },
+			"8":  { "PREVCLOSE": "FLOAT(10,2)" },
+			"9":  { "TOTTRDQTY": "FLOAT(20)" },
+		    "10": { "TOTTRDVAL": "FLOAT(20)" },
+		    "11": { "TIMESTAMP": "DATE" }
+		},
+		"Index": [
+			"SYMBOL",
+			"TIMESTAMP"
+        ],
+		"Primary_key": [
+			"SYMBOL",
+			"TIMESTAMP"
+        ],
+        "Alter_Table": [
+            {   "Attribute_position" : "11",
+                "DB_column" : "TIMESTAMP",
+                "Function": "STR_TO_DATE",
+                "Format": "%d-%M-%Y"
+            }
+        ]        
+	}
+}
