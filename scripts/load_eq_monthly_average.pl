@@ -63,8 +63,8 @@
                 my $data = $row_ary[0] ? $row_ary[0] : 0;
                 $data = sprintf("%.2f", $data); 
                 my $inc_percent;
-                if( $previous_avg_calc_count != 0) {
-                    $inc_percent = (($data - $previous_avg_increase_percent) * $previous_avg_increase_percent / 100) ;
+                if( $previous_avg_calc_count != 0 && $previous_avg_increase_percent !=0 ) {
+                    $inc_percent = (($data - $previous_avg_increase_percent) * 100 / $previous_avg_increase_percent) ;
                     $inc_percent = sprintf("%.2f", $inc_percent); 
                     # print "INC ************** $inc_percent\n";
                 }

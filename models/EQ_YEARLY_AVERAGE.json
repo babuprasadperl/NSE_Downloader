@@ -1,0 +1,33 @@
+{
+	"Database": {
+		"Table_Name":"EQ_YEARLY_AVERAGE",
+		"Attributes": {
+			"1":  { "SYMBOL": "VARCHAR(50)" },
+			"2":  { "YEAR": "FLOAT(20)" },
+			"3":  { "AVERAGE": "FLOAT(20,2)" },
+			"4":  { "INCREASE_PERCENT": "FLOAT(20,2)" },
+			"5":  { "INCREASE_10_PERCENT": "INT(1)"  },
+			"6":  { "INCREASE_30_PERCENT": "INT(1)"  },
+			"7":  { "INCREASE_50_PERCENT": "INT(1)"  },
+			"8":  { "INCREASE_70_PERCENT": "INT(1)"  },
+			"9": { "INCREASE_100_PERCENT": "INT(1)" },
+			"10": { "INCREASE_150_PERCENT": "INT(1)" },
+			"11": {	"INCREASE_200_PERCENT": "INT(1)" },
+			"12": {	"DECREASE_10_PERCENT": "INT(1)" },
+			"13": {	"DECREASE_30_PERCENT": "INT(1)" },
+			"14": { "DECREASE_50_PERCENT": "INT(1)" },
+			"15": {	"DECREASE_70_PERCENT": "INT(1)" },
+			"16": { "DECREASE_100_PERCENT": "INT(1)" },
+			"17": { "DECREASE_150_PERCENT": "INT(1)" },
+			"18": { "DECREASE_200_PERCENT": "INT(1)" }
+ 		},
+		"Index": [
+			"SYMBOL",
+			"YEAR"
+        ],
+		"Primary_key": [
+			"SYMBOL",
+			"YEAR"
+        ]
+	}
+}
