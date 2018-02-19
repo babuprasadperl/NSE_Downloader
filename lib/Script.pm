@@ -26,10 +26,6 @@ sub execute_script {
 	my $script = shift;
 	print "Executing script = $script\n";
 	my $file = read_file($script);
-	my $command = <<COM;
-
-COM
-	my $out = qx{perl $script};
-	print "Output : $output\n-----------------------------------------\n\n";
+	print qx{perl $script};
 }
 1;

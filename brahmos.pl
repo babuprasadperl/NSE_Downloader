@@ -23,8 +23,8 @@ sub main {
 				 "recent"    => \$recent,
 			     "import"    => \$import,
 				 "script=s"  => \$script,
-				 "all"       => \$script_all);
-	if(!$downloader && !$import && !$recent) {
+				 "script-all" => \$script_all);
+	if(!$downloader && !$import && !$recent && !$script && !$script_all) {
 		usage();
 	}
 	if($downloader) {
@@ -41,12 +41,10 @@ sub main {
 		Downloader::download_recent();
 	}
 	if($script) {
-		if($script_all) {
-			Script::run_all();
-		}
-		else {
-			Script::run_script($script);
-		}
+		Script::run_script($script);
+	}
+	if($script_all) {
+		Script::run_all();
 	}
     return;
 }
@@ -61,7 +59,7 @@ sub usage() {
 	--import   : Import the downloaded csv file to mysql database
 	--recent   : Download the current year's recent file and upload to mysql database directly
 	--script   : To run external scripts
-	[Note: You can run either all scripts by specifying --all or give the name of the script]
+	--script-all : To run all external scripts
 	
 	Examples:
 	perl brahmos.pl --download
